@@ -1,0 +1,28 @@
+<div class="container">
+  <br><br>
+  <h1 class="header center orange-text">Starter Template</h1>
+  <div class="row center">
+    <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+  </div>
+  <div class="row center">
+    <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
+  </div>
+  <br><br>
+<form>
+  <label>Name</label>
+  <input ng-model="routineCtrl.newRoutine.name">
+  <label>Description</label>
+  <input ng-model="routineCtrl.newRoutine.description">
+  <button ng-click="routineCtrl.routines.save(routineCtrl.newRoutine); routineCtrl.newRoutine=''">Add</button>
+  <button ng-click="routineCtrl.removeAll()">Remove All</button>
+</form>
+<ul>
+<li>hello</li>
+  <li ng-repeat="routine in routineCtrl.routines">
+    <a href="/routines/{{routine._id}}">{{routine.name}}</a>
+    <p>{{routine.description}}</p>
+    <button ng-click="routineCtrl.remove(routine)">X</button>
+  </li>
+</ul>
+
+</div>
