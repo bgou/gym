@@ -1,14 +1,20 @@
 Meteor.startup(function () {
   if (Routines.find().count() === 0) {
     var routines = [
-      {'name': 'Dubstep-Free Zone',
-        'description': 'Fast just got faster with Nexus S.'},
+      {'name': 'Love your abs',
+        'workouts': [
+          {'description': 'push up', 'reps': "5,10,15,20"}
+        ]},
       {'name': 'All dubstep all the time',
-        'description': 'Get it on!'},
+        'workouts': [
+          {'description': 'push up', 'reps': "5,10,15,20"}
+        ]},
       {'name': 'Savage lounging',
-        'description': 'Leisure suit required. And only fiercest manners.'}
+        'workouts': [
+          {'description': 'push up', 'reps': "5,10,15,20"}
+        ]}
     ];
     for (var i = 0; i < routines.length; i++)
-      Routines.insert({name: routines[i].name, description: routines[i].description});
+      Routines.insert(routines[i]);
   }
 });
