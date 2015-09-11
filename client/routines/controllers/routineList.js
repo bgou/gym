@@ -1,7 +1,7 @@
 angular.module("gym").controller("RoutineListCtrl", ['$scope', '$meteor',
   function($scope, $meteor){
     var vm = this;
-    vm.routines = $meteor.collection(Routines).subscribe('routines');
+    vm.routines = $meteor.collection(Routines).subscribe('activeRoutines');
 
     vm.remove = function(routine){
       vm.routines.remove(routine);
