@@ -1,14 +1,14 @@
-angular.module('gym',[
-    'angular-meteor',
-    'ui.router'
+angular.module('gym', [
+  'angular-meteor',
+  'ui.router',
+  'ui.materialize'
 ]);
 
 
 function onReady() {
   angular.bootstrap(document, ['gym']);
-  $(".button-collapse").sideNav();
 }
- 
+
 if (Meteor.isCordova)
   angular.element(document).on("deviceready", onReady);
 else
