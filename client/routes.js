@@ -10,11 +10,6 @@ angular.module("gym").config(['$urlRouterProvider', '$stateProvider', '$location
         controller: 'RoutineListCtrl',
         controllerAs: 'routineCtrl'
       });
-      // .state('partyDetails', {
-      //   url: '/parties/:partyId',
-      //   templateUrl: 'client/parties/views/party-details.ng.html',
-      //   controller: 'PartyDetailsCtrl'
-      // });
 
     $urlRouterProvider.otherwise("/routines");
   }]);

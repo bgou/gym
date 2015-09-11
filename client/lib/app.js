@@ -6,6 +6,7 @@ angular.module('gym',[
 
 function onReady() {
   angular.bootstrap(document, ['gym']);
+  $(".button-collapse").sideNav();
 }
  
 if (Meteor.isCordova)
