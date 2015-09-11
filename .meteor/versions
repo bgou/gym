@@ -1,8 +1,5 @@
 angular@1.0.0-rc.4
 angular:angular@1.4.5
-angular:angular-animate@1.4.5
-angular:angular-aria@1.4.5
-angular:angular-material@0.11.0
 angularui:angular-ui-router@0.2.15
 autoupdate@1.2.1
 base64@1.0.3
@@ -11,6 +8,7 @@ blaze@2.1.2
 blaze-tools@1.0.3
 boilerplate-generator@1.0.3
 callback-hook@1.0.3
+charcolios:angular-materialize@0.1.0
 check@1.0.5
 dburles:mongo-collection-instances@0.3.4
 ddp@1.1.0
@@ -51,6 +49,7 @@ templating@1.1.1
 tracker@1.0.7
 ui@1.0.6
 underscore@1.0.3
+urigo:angular@0.9.3
 urigo:angular-blaze-template@0.0.1
 url@1.0.4
 webapp@1.2.0

@@ -9,5 +9,4 @@ insecure
 angular
 angularui:angular-ui-router
 urigo:angular-blaze-template
-materialize:materialize
-angular:angular-material
+charcolios:angular-materialize

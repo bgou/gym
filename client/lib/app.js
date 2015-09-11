@@ -1,7 +1,6 @@
 angular.module('gym',[
     'angular-meteor',
-    'ui.router',
-    'ngMaterial'
+    'ui.router'
 ]);
 
 
