@@ -1,12 +1,11 @@
-Meteor.publish("activeRoutines", function () {
+Meteor.publish("activeRoutines", function() {
   return Routines.find({
-    'active': true
+    $and: [{'active': {$exists:true}}, {'active': true}]
   });
 });
 
-
-Meteor.publish("inactiveRoutines", function () {
+Meteor.publish("inactiveRoutines", function() {
   return Routines.find({
-    'active': false
+    $or: [{'active': {$exists: false}}, {'active': false }] 
   });
 });

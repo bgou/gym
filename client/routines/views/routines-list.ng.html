@@ -7,10 +7,10 @@
       </ul>
     </div>
     <div id="active-routines">
-      <div class="row" id="active-routines">
-        <div class="col s4" ng-repeat="routine in routineCtrl.routines">
+      <div class="row">
+        <div class="col s4" ng-repeat="routine in routineCtrl.activeRoutines">
           <div class="card-panel hoverable">
-            <a class="right" href ng-click="routineCtrl.remove(routine)"><i class="small material-icons">delete</i></a>
+            <a class="right" href ng-click="routineCtrl.removeActive(routine)"><i class="small material-icons">delete</i></a>
             <h5 class="light-blue-text center-align">{{routine.name}}</h5>
             <div class="collection">
               <div class="collection-item" ng-repeat="workout in routine.workouts">
@@ -31,10 +31,27 @@
             </div>
           </div>
           <button class="waves-effect waves-light btn" ng-click="routineCtrl.routines.save(routineCtrl.newRoutine); routineCtrl.newRoutine=''">Add</button>
-          <button class="waves-effect waves-light btn orange" ng-click="routineCtrl.removeAll()">Remove All</button>
+          <button class="waves-effect waves-light btn orange" ng-click="routineCtrl.removeAllActive()">Remove All</button>
         </form>
       </div>
     </div>
-    <div id="inactive-routines" class="col s12">Inactive Routines</div>
+
+    
+    <div id="inactive-routines" class="col s12">
+      <div class="row">
+        <div class="col s4" ng-repeat="routine in routineCtrl.inactiveRoutines">
+          <div class="card-panel hoverable">
+            <a class="right" href ng-click="routineCtrl.removeActive(routine)"><i class="small material-icons">delete</i></a>
+            <h5 class="light-blue-text center-align">{{routine.name}}</h5>
+            <div class="collection">
+              <div class="collection-item" ng-repeat="workout in routine.workouts">
+                {{workout.description}}
+                <span class="badge">{{workout.reps}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
